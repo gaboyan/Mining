@@ -13,14 +13,25 @@ namespace Mining
 
         static void Main(string[] args)
         {
-            string temp;
+            int k;
 
-            Mine mine1 = new Mine();
-            mine1.Name = "Zangezur";
-            mine1.Type = MineType.Uran;
-            mine1.Ammount = 8200;
-            temp = mine1.State;
-            Console.WriteLine(temp);
+
+            Mine hanq = new Mine();
+            hanq.Name = "Zangezur";
+            hanq.Type = MineType.Uran;
+            hanq.Ammount = 10;
+
+            Miner Poghos = new Miner();
+            Poghos.HitsPerDay=5;
+            Poghos.Health = 98;
+            Poghos.AmmountsPerHit = 300;
+
+            Console.WriteLine("Insert Days count or leave blank for deadly finish.");
+            k = Convert.ToInt32(Console.ReadLine());
+
+
+
+            Console.WriteLine("State: " + hanq.State + ", Ammount: " + hanq.Ammount);
             Console.Read();
         }
     }
