@@ -8,17 +8,17 @@ namespace Mining
 {
     class Mine
     {
-        private const int MinAmmount = 0;
-        private const int MaxAmmount= 10000;
+        private const int MinAmount = 0;
+        private const int MaxAmount= 10000;
         private string _name;
         private string _state;
-        private int _ammount;
+        private int _amount;
 
         public string Name
         {
             get
             {
-                return this.Name;
+                return this._name;
             }
             set
             {
@@ -31,21 +31,21 @@ namespace Mining
 
         public MineType Type;
 
-        public int Ammount
+        public int Amount
         {
             get
             {
-                return this._ammount;
+                return this._amount;
             }
             set
             {
-                if (value < MinAmmount) this._ammount = 0;
+                if (value < MinAmount) this._amount = 0;
                 else
                 {
-                    if (value > MaxAmmount) this._ammount = 10000;
+                    if (value > MaxAmount) this._amount = 10000;
                     else
                     {
-                        this._ammount = Convert.ToInt32(value);
+                        this._amount = Convert.ToInt32(value);
 
                     }
                 }
@@ -57,19 +57,19 @@ namespace Mining
         {
             get
             {
-                if (this.Ammount >= 8000)
+                if (this.Amount >= 8000)
                 {
                     return  "Good";
                 }
                 else
                 {
-                    if (this.Ammount >= 4000)
+                    if (this.Amount >= 4000)
                     {
                         return  "So-So";
                     }
                     else
                     {
-                        if (this.Ammount >= 100)
+                        if (this.Amount >= 100)
                         {
                             return "Lori";
                         }
@@ -86,8 +86,6 @@ namespace Mining
             {
             }
         }
-
-
 
         public Mine()
         {
